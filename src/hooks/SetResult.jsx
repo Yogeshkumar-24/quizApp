@@ -24,7 +24,7 @@ export const usePublishResult = (resultData) => {
     (async () => {
         try {
             if(result != [] && !username) throw new Error("Could'nt fetch result")
-            await postDataToServer("http://localhost:8800/api/results",resultData,data => data)
+            await postDataToServer("https://quizapp-server-production-7729.up.railway.app/api/results",resultData,data => data)
         } catch (error) {
             console.log(error)
         }
