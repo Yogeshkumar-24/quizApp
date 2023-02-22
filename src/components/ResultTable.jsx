@@ -6,7 +6,7 @@ const ResultTable = () => {
     const [data,setData] = useState([])
 
     useEffect(() => {
-        getDataFromServer('http://localhost:8800/api/results', (res) => {
+        getDataFromServer('https://quizapp-server-production-7729.up.railway.app/api/results', (res) => {
         setData(res)
     })
     })
