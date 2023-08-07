@@ -12,7 +12,7 @@ export const useFetchQuestion = () => {
 
         (async () => {
             try {
-                const [{questions,answers}] =  await getDataFromServer(`https://quizapp-server-production-7729.up.railway.app/api/questions`,(data =>data))
+                const [{questions,answers}] =  await getDataFromServer(`https://quizapp-server-7maa.onrender.com/api/questions`,(data =>data))
                 if(questions.length > 0){
                     setGetData(prev => ({...prev,Loading:false}))
                     setGetData(prev => ({...prev,apiData:{questions,answers}}))
